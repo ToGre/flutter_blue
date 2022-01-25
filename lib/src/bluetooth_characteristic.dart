@@ -26,11 +26,8 @@ class BluetoothCharacteristic {
         _value.stream,
         _onValueChangedStream,
       ]);
-  
+
   List<int> get lastValue {
-    if(_value.value == null) {
-      [];
-    }else{
       _value.value;
     }
   }
