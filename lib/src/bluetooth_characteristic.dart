@@ -26,8 +26,14 @@ class BluetoothCharacteristic {
         _value.stream,
         _onValueChangedStream,
       ]);
-
-  List<int> get lastValue => _value.value ?? <int>[];
+  
+  List<int> get lastValue {
+    if(_value.value == null) {
+      [];
+    }else{
+      _value.value;
+    }
+  }
 
   BluetoothCharacteristic.fromProto(protos.BluetoothCharacteristic p)
       : uuid = new Guid(p.uuid),
