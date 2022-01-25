@@ -29,7 +29,6 @@ class BluetoothCharacteristic {
 
   List<int> get lastValue {
       _value.value;
-    }
   }
 
   BluetoothCharacteristic.fromProto(protos.BluetoothCharacteristic p)
